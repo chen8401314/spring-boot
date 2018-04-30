@@ -1,5 +1,6 @@
 package com.cx.service;
 
+import com.cx.request.SaveUserRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,13 @@ public class UserService {
 	 */
 	public Response getUser(long uid){
 	    User  user =	userDao.getUserById(uid);
-	    UserResponse response = UserCopier.INSTANCE.asUserDto(user);
+	    UserResponse response = UserCopier.INSTANCE.map(user);
 		return Response.success(response);
 	}
-	
+
+	public Response saveUser(SaveUserRequest saveUserRequest){
+		User user = UserCopier.INSTANCE.map(saveUserRequest);
+     	 userDao.saveUser(user);
+		return Response.success();
+	}
 }

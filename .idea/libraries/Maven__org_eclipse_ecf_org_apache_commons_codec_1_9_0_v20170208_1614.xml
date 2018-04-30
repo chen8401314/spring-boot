@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.eclipse.ecf:org.apache.commons.codec:1.9.0.v20170208-1614">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../eclipse/apache-maven-3.0.5-repository/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../eclipse/apache-maven-3.0.5-repository/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../eclipse/apache-maven-3.0.5-repository/org/eclipse/ecf/org.apache.commons.codec/1.9.0.v20170208-1614/org.apache.commons.codec-1.9.0.v20170208-1614-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

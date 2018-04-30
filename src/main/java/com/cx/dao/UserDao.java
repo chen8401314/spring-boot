@@ -29,6 +29,9 @@ public class UserDao {
         }
         return null;
     }
+    public int saveUser(User user){
+        return userMapper.insertSelective(user);
+    }
 
     public User getExtUser(){
     	return extUserMapper.getExtUser(0);

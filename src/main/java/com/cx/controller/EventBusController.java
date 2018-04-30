@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,8 @@ public class EventBusController {
 
 	@Autowired
     private ApplicationEventBus applicationEventBus;
-    
+
+    @ApiOperation(value="发送信息", notes="")
     @RequestMapping(value = "/send", method = RequestMethod.GET)
     @ResponseBody
     public String send(HttpServletRequest request, HttpServletResponse response) {

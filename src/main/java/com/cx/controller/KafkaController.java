@@ -1,6 +1,7 @@
 package com.cx.controller;
 
 
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class KafkaController {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
+    @ApiOperation(value="发送信息", notes="")
     @RequestMapping(value = "/send", method = RequestMethod.GET)
     @ResponseBody
     public String sendKafka(HttpServletRequest request, HttpServletResponse response) {

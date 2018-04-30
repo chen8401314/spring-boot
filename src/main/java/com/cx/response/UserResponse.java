@@ -10,5 +10,5 @@ public class UserResponse extends BaseResponse {
 
     private long id;
     
-    private String name;
+    private String testName;
 }
