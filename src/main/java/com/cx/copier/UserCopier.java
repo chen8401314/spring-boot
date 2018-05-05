@@ -7,14 +7,14 @@ import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
 import com.cx.domain.User;
-import com.cx.response.UserResponse;
+import com.cx.response.UserDTO;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserCopier {
 	UserCopier INSTANCE = Mappers.getMapper(UserCopier.class);
 
 	@Mapping(target = "testName", source = "name")
-	UserResponse map(User bean);
+	UserDTO map(User bean);
 	
 	User map(SaveUserRequest bean);
 }

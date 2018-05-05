@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-import com.cx.response.BaseResponse;
+import com.cx.response.BaseDTO;
 import com.cx.util.SecurityUtil;
 
 /**
@@ -55,7 +55,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * @param data
      * @return
      */
-    public static <T extends BaseResponse> Response<T> success(T data){
+    public static <T extends BaseDTO> Response<T> success(T data){
         Response<T> response =  new Response<T>(DEFAULT_CODE_SUCCESS,DEFAULT_MESSAGE_SUCCESS,data);
         response.refreshAccessToken();
         return response;
@@ -65,7 +65,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * 系统默认成功
      * @return
      */
-    public static <T extends BaseResponse> Response<T> success(){
+    public static <T extends BaseDTO> Response<T> success(){
         Response<T> response =  new Response<T>(DEFAULT_CODE_SUCCESS,DEFAULT_MESSAGE_SUCCESS);
         response.refreshAccessToken();
         return response;
@@ -87,7 +87,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * @param message
      * @return
      */
-    public static <T extends BaseResponse> Response<T> failure(int code,String message){
+    public static <T extends BaseDTO> Response<T> failure(int code, String message){
         Response<T> response =  new Response<T>(code,message);
         response.refreshAccessToken();
         return response;
@@ -99,7 +99,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * @param message
      * @return
      */
-    public static <T extends BaseResponse> Response<T> success(int code,String message){
+    public static <T extends BaseDTO> Response<T> success(int code, String message){
         Response<T> response =  new Response<T>(code,message);
         response.refreshAccessToken();
         return response;
@@ -112,7 +112,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * @param data
      * @return
      */
-    public static <T extends BaseResponse> Response<T> success(int code,String message,T data){
+    public static <T extends BaseDTO> Response<T> success(int code, String message, T data){
         Response<T> response =  new Response<T>(code,message,data);
         response.refreshAccessToken();
         return response;
@@ -125,7 +125,7 @@ public class Response<T extends Serializable> implements Serializable  {
      * @param data
      * @return
      */
-    public static <T extends BaseResponse> Response<T> failure(int code,String message,T data){
+    public static <T extends BaseDTO> Response<T> failure(int code, String message, T data){
 
         Response<T> response =  new Response<T>(code,message,data);
         response.refreshAccessToken();
